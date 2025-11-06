@@ -21,4 +21,8 @@
       #e7e7e7 0.01%,
       #1a1a1a
     );
+  --name: #FF0000;
+  --heart-color: #FF0000;
+  --contour-color: #000000;
+  --accent-color: #000000;
 }
