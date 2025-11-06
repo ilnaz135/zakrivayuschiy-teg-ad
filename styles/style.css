@@ -12,7 +12,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter-text);
+  font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
   font-variation-settings: var(--font-thickness-title-text);
 }
 
@@ -41,7 +41,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-press2P-text);
+  font-family: var(--font-press2P-text, Arial, Helvetica, sans-serif);
   color: #000000;
   text-transform: uppercase;
   font-weight: 400;
@@ -128,7 +128,6 @@
   box-shadow: 2px 2px 0px 0px var(--themes-mainColor);
 }
 
-
 .card__like-button::before {
   content: '';
   position: absolute;
@@ -148,7 +147,7 @@
 }
 
 .button__text {
-  font-family: var(--font-press2P-text);
+  font-family: var(--font-press2P-text, Arial, Helvetica, sans-serif);
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -192,7 +191,7 @@
   text-transform: uppercase;
   top: 3%;
   left: 82%;
-  font-family: var(--font-press2P-text);
+  font-family: var(--font-press2P-text, Arial, Helvetica, sans-serif);
   font-weight: 400;
   color: #000000;
   mix-blend-mode: hard-light;
@@ -217,7 +216,7 @@ dialog {
 }
 
 .dialog__text {
-  font-family: var(--font-press2P-text);
+  font-family: var(--font-press2P-text, Arial, Helvetica, sans-serif);
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -225,7 +224,7 @@ dialog {
 .dialog__button {
   width: 293px;
   height: 38px;
-  font-family: var(--font-press2P-text);
+  font-family: var(--font-press2P-text, Arial, Helvetica, sans-serif);
   font-size: 14px;
   margin-left: 10px;
 }
@@ -292,7 +291,7 @@ dialog {
   }
 }
 
-.like-icon{
+.like-icon {
   display: inline-block;
   width: 39px;
   height: 36px;
@@ -300,7 +299,7 @@ dialog {
   -webkit-tap-highlight-color: transparent;
 }
 
-.like-icon .heart{
+.like-icon .heart {
   transform-origin: center;
 }
 
@@ -314,7 +313,7 @@ dialog {
   transition: fill 0.1s linear 0s;
 }
 
-.like-icon .sparks{
+.like-icon .sparks {
   fill: var(--animation-fill-color);
   opacity: 0;
   transform-origin: center;
@@ -375,6 +374,8 @@ dialog {
   animation: sparks-flash 0.3s ease-in 0.3s 1 both;
 }
 
-.like-icon .sparks {
-  pointer-events: none;
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
+  }
 }
