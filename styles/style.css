@@ -1,18 +1,7 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 @supports (font-variation-settings: normal) {
   .page {
     font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
-    font-variation-settings: 'wght'var(--font-weight-normal, 400);
+    font-variation-settings: 'wght' var(--font-weight-normal, 400);
   }
 }
 
@@ -275,6 +264,36 @@ dialog {
 
 .card--8 {
   filter: contrast(175%) brightness(3%);
+}
+
+.like-icon {
+  overflow: visible;
+  inline-size: 39px;
+}
+
+.main-body,
+.core {
+  fill: none;
+}
+
+.like-icon:hover .core,
+.like-icon:hover .main-body {
+  fill: var(--color-main, rgba(0, 0, 0, 1));
+}
+
+.like-icon:active .core,
+.like-icon:active .main-body {
+  fill: var(--color-heart-mb, #ff0000);
+}
+
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .contour {
+  fill: var(--color-heart-mb, #ff0000);
+}
+
+.sparks {
+  opacity: 0;
 }
 
 @media (width <=375px) {
