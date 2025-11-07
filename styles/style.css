@@ -12,7 +12,7 @@
 @supports (font-variation-settings: normal) {
   .page {
     font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
-    font-variation-settings: 'wght' var(--font-weight-normal, 400);
+    font-variation-settings: 'wght'var(--font-weight-normal, 400);
   }
 }
 
@@ -34,7 +34,6 @@
   border: 2px solid var(--themes-mainColor, #000000);
   cursor: pointer;
   background: none;
-  type: button;
 }
 
 .header {
@@ -269,14 +268,16 @@ dialog {
 .card--6 {
   filter: invert(1);
 }
+
 .card--7 {
   filter: opacity(0.5);
 }
+
 .card--8 {
   filter: contrast(175%) brightness(3%);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header {
     margin-top: 100px;
     gap: 50px;
