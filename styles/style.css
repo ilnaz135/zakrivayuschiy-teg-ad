@@ -12,6 +12,7 @@
 @supports (font-variation-settings: normal) {
   .page {
     font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
+    font-variation-settings: 'wght' var(--font-weight-normal, 400);
   }
 }
 
