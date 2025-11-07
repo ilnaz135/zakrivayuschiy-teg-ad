@@ -512,14 +512,13 @@
             продолжить
           </h2>
         </div>
-      <form method="dialog" class="form">
         <button
           class="dialog__button button"
-          type="submit"
+          type="button"
+          onclick="window['dialog-id'].close()"
         >
-          ОК
+          <span class="button__text">OK</span>
         </button>
-      </form>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
