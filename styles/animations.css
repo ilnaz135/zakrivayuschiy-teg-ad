@@ -10,6 +10,16 @@
 
 */
 
+@keyframes arrow {
+  from {
+    inset-inline-start: -16px;
+  }
+
+  to {
+    inset-inline-start: -12px;
+  }
+}
+
 @keyframes big-heart {
   from {
     transform: scale(1);
