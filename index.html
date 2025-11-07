@@ -488,14 +488,14 @@
           </div>
         </div>
         <div class="card__about-save-container">
-          <button 
+          <svg class="card__about-svg">
+            <use href="./svg/symbol.svg"></use>
+          </svg>
+          <button
             type="button"
             class="card__about-save-button button"
             onclick="window['dialog-id'].showModal()"
           >
-            <svg class="card__about-svg">
-              <use href="./svg/symbol.svg"></use>
-            </svg>
             <span class="button__text">Сохранить на память</span>
           </button>
         </div>
@@ -503,11 +503,19 @@
       <dialog class="dialog__insert" id="dialog-id">
         <div class="dialog__container">
           <svg class="card__about-svg">
-              <use href="./svg/symbol.svg"></use>
+            <use href="./svg/symbol.svg"></use>
           </svg>
-          <h2 class="dialog__text">Вставьте <br> дискету, чтобы <br> продолжить</h2>
+          <h2 class="dialog__text">
+            Вставьте <br />
+            дискету, чтобы <br />
+            продолжить
+          </h2>
         </div>
-        <button type="button" class="dialog__button button" onclick="window['dialog-id'].close()">
+        <button
+          type="button"
+          class="dialog__button button"
+          onclick="window['dialog-id'].close()"
+        >
           ОК
         </button>
       </dialog>
