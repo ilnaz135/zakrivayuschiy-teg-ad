@@ -9,10 +9,23 @@
 
 */
 
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
+  }
+}
+
+@supports ((text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1))) or (-webkit-text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1)))) {
+  .card__about-lable {
+    -webkit-text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1));
+    text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1));
+    text-shadow: none;
+  }
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
   font-variation-settings: var(--font-thickness-title-text);
 }
 
@@ -21,7 +34,7 @@
 }
 
 .header {
-  background-image: var(--background-image);
+  background-image: var(--background-img);
   background-size: cover;
   width: clamp(375px, 1440px, 1440px);
   height: clamp(667px, 960px, 960px);
@@ -177,12 +190,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 52px;
+  margin-top: 96px;
   width: 335px;
   height: 51px;
 }
 
-.card__about-container-image {
+.card__about-container-img {
   position: relative;
 }
 
@@ -229,7 +242,37 @@ dialog {
   margin-left: 10px;
 }
 
-@media (width <=375px) {
+.card--1 {
+  filter: blur(30px);
+}
+
+.card--2 {
+  filter: brightness(5)
+}
+
+.card--3 {
+  filter: contrast(3);
+}
+
+.card--4 {
+  filter: grayscale(1);
+}
+
+.card--5 {
+  filter: hue-rotate(30deg);
+}
+
+.card--6 {
+  filter: invert(1);
+}
+.card--7 {
+  filter: opacity(0.5);
+}
+.card--8 {
+  filter: contrast(175%) brightness(3%);
+}
+
+@media (width <= 375px) {
   .header {
     margin-top: 100px;
     gap: 50px;
@@ -269,6 +312,7 @@ dialog {
     height: 80px;
     flex-direction: column;
     gap: 8px;
+    margin-top: 93px;
   }
 
   .card__about-svg {
@@ -288,11 +332,5 @@ dialog {
   .dialog__button {
     width: 293px;
     margin: 0 20px 30px;
-  }
-}
-
-@supports (font-variation-settings: normal) {
-  .page {
-    font-family: var(--font-inter-text, Arial, Helvetica, sans-serif);
   }
 }
