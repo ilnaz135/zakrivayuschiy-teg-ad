@@ -5,7 +5,8 @@
   --font-thickness-main-text: 400;
   --font-thickness-title-text: 700;
   --themes-mainColor: #000000;
-  --background-image: 
+  --bg-color: rgba(255, 255, 255, 1);
+  --background-img: 
     repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
@@ -24,4 +25,5 @@
   --name: #FF0000;
   --heart-color: #FF0000;
   --contour-color: #000000;
+  --accent-color: #000000;
 }
