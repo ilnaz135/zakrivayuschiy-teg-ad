@@ -8,7 +8,6 @@
 @supports ((text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1))) or (-webkit-text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1)))) {
   .card__about-lable {
     -webkit-text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1));
-    text-stroke: 1px var(--bg-color, rgba(255, 255, 255, 1));
     text-shadow: none;
   }
 }
@@ -117,6 +116,7 @@
   justify-content: flex-end;
   margin-right: 25px;
   align-items: center;
+  cursor: pointer;
 }
 
 .card__like-button {
@@ -126,6 +126,7 @@
   margin-left: 6px;
   transition: box-shadow 0.5s ease-in-out;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card__like-button:focus {
@@ -165,6 +166,7 @@
   border: none;
   outline: none;
   box-shadow: none;
+  cursor: pointer;
 }
 
 .card__about-svg {
@@ -185,6 +187,7 @@
   margin-top: 96px;
   width: 335px;
   height: 51px;
+  cursor: pointer;
 }
 
 .card__about-container-img {
@@ -232,6 +235,7 @@ dialog {
   font-family: var(--font-press2P-text, Arial, Helvetica, sans-serif);
   font-size: 14px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .card--1 {
@@ -337,6 +341,7 @@ dialog {
     flex-direction: column;
     gap: 8px;
     margin-top: 93px;
+    cursor: pointer;
   }
 
   .card__about-svg {
@@ -356,5 +361,6 @@ dialog {
   .dialog__button {
     width: 293px;
     margin: 0 20px 30px;
+    cursor: pointer;
   }
 }
