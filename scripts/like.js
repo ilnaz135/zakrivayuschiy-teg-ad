@@ -39,8 +39,3 @@ function setButtonText(heart, button) {
     );
   }
 }
-
-document.querySelectorAll('button').forEach(btn => btn.addEventListener('click', (e) => {
-  console.log(e);
-  e.preventDefault()
-}))
